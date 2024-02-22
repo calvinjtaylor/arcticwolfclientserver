@@ -1,0 +1,17 @@
+<configuration>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>arcticwolfscanner.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.JsonEncoder"/>
+        <append>true</append>
+        <immediateFlush>true</immediateFlush>
+    </appender>
+
+    <logger name="org.caltaylor" level="DEBUG" additivity="false">
+        <!-- Reference the appender -->
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
